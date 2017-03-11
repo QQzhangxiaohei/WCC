@@ -1,0 +1,6 @@
+1.Emmet使用公式生成大量html标签的技术
+	Emmet: 蚂蚁（古英语、方言），艾米特（人名）
+2.演示Emmet
+3.Emmet语法列表 http://docs.emmet.io/cheat-sheet/
+4.Emmet之前叫 Zen Coding  神一样的编码，它可以极大地提高敲代码的速度，被称为前端神器
+5.目前很多代码编辑器都已支持 Emmet

@@ -1,0 +1,78 @@
+1.animation-name：move移动    动画名称，不是动画效果。多个动画名称可以用逗号隔开
+
+#animation-timing-function：linear   从头到尾播放速度一致
+
+
+2.animation-duration：4s   动画持续时间，默认值为0，动画不执行
+
+
+3.animation-delay：1s     动画的延迟时间
+
+
+4.animation-iteration-count：2；动画的重复次数  infinite无穷
+
+
+5.animation-direction：动画的执行方向
+
+  1.normal：正常的，    reverse：反向的；alternate：一正一反，  alternate-reverse：一反一正
+
+6.@keyframes：关键帧，定义动画的关键帧
+
+@keyframes move{
+form{     //定义动画初始状态
+      top：0px；
+       left：0px；            }
+
+  25%{
+                /*右上角*/
+                top: 0px;
+                left: calc(100% - 200px);
+            }
+            50%{
+                /*右下角*/
+                top: calc(100% - 200px);
+                left: calc(100% - 200px);
+            }
+            75%{
+                /*左下角*/
+                top: calc(100% - 200px);
+                left: 0px;
+            }
+to{        //定义动画结束状态
+       top ：0px；
+        left：0px；                     }
+}
+
+
+
+
+
+7.animation-fill-mode：动画填充模式
+
+
+forwards：前面；保持动画的结束状态
+backwards：后面；保持动画的开始状态
+both：都；保持动画开始、结束状态。具体指动画开始前，标签处于开始状态，动画结束时，标签处于结束状态。
+
+8.动画运动参考点：transform-origin 参考点为左上角
+
+9.动画效果---
+
+1.transform：rotate（0deg）旋转
+2.transform：translate（）平移
+3.transform：scale  缩放
+4.transform：skew  倾斜
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,330 @@
+1.引入文本文档--
+< link rel="stylesheet" href="文本地址"type="text/css">
+
+CSS可控制超链接样式-css链接样式如下
+a:link是超级链接的初始状态
+a:hover是把鼠标放上去时悬停的状况
+a:active 是鼠标点击时
+a:visited是访问过后的情况
+
+a{color:#333;text-decoration:none; } //对全站有链接的文字颜色样式为color:#333;并立即无下划线text-decoration:none;
+a:hover {color:#CC3300;text-decoration:underline;}//对鼠标放到超链接上文字颜色样式变为color:#CC3300;并文字链接加下划线text-decoration:underline;
+
+
+通过链接内设置类控制超链接样式css方法
+案例超链接代码<a href="http://www.divcss5.com/" class="yangshi">CSS</a>
+对应CSS代码
+a.yangshi{color:#333;text-decoration:none; }
+a.yangshi:hover {color:#CC3300;text-decoration:underline;}
+通过这样的设置可以控制链接内的css类名为“yangshi”超链接的样式
+
+
+
+2.导入图片--
+<img src="图片" alt="">
+
+3.页面跳转--
+<a href="跳转地址名称"></a>
+跳转时在新窗口打开-
+给a标签加target="_brank" 属性。
+
+<a href="网址、链接地址" target="目标" title="说明">被链接内容</a>
+
+
+ &&target目标值如下：
+_blank -- 在新窗口中打开链接 _parent -- 在父窗体中打开链接 _self -- 在当前窗体打开链接,此为默认值 _top -- 在当前窗体打开链接，并替换当前的整个窗体(框架页)
+
+
+4.页面内跳转--
+<a href="#页面内需跳转到位置名称"></a>
+
+
+5.引用标识符号--
+添加前后缀
+
+《伪类选择器》
+标签::before{          （after）
+
+       content:'符号'
+  }
+
+
+6.无序列表：ul；   列表项：li；    有序列表：ol； 
+  定义列表：dl；   列表标题：dt；  列表内容：dd； 
+
+7.自动编号---
+  所在块名称{
+   counter-reset：计数器名称 计数器起始值;
+} 
+  计数器名称{
+   counter-increment：计数器名称 递增值;
+}
+   计数器名称：：before{
+   content：counter（计数器名称）'.';
+}
+8.盒模型大小固定--
+  box-sizing：border-box；
+
+9.改变堆叠顺序--
+in-dex="";
+
+10.后代选择器--
+li后代标签：nth-child（2）
+
+11.设置边框线--
+border：1px 边框样式solid（dashed虚线 ） 颜色
+
+
+12.设置边框线之间的间隔--
+
+border-spacing：0px;
+
+13.边框线的重叠部分的合并与分离--
+barder-collapse：collapse;（separate 分离）
+
+14.固定盒子大小（无论内外边距变化）--
+box-sizing：border-box;
+
+15.盒子、文字阴影设置--
+
+ 盒子阴影：    1. x-offset：阴影水平方向偏移量，正值往右偏，负值往左。
+              2. y-offset：阴影垂直方向偏移量，正值往下偏，负值往上。
+              3. 阴影模糊半径：值越大边缘越模糊。
+              4. 阴影扩展半径：值越大想=向外扩展越大。
+              5. 阴影颜色。
+               box-shadow: 0 1px 1px 0px gray;
+
+ 字体阴影设置：（1）阴影的左右分布，正右负左
+               （2）阴影的上下分布，正下负上
+                (3)模糊效果设置 数值越大散布效果越大，越不明显
+              注意： 颜色可叠加
+              text-shadow: 2px 2px 0px orange;
+
+16.并集选择器---
+
+选择器，选择器，选择器{}
+body，p，h1，h2，h3{
+
+17.圆切角设置--
+
+border-radius：50%;
+
+18. 设置弹性盒子--
+
+display：flex；
+ 
+display：block；（设置显示块）dispiay：inline；行标签 、dispiay：inline-block行内块标签
+
+19.图片部分取景--
+
+div{
+     width：300px;
+     height：300px；(先设置所需显示图片的大小)
+
+     background-image：rul（图片）；
+     background-size：700px 700px；（可以理解为图片放大尺寸
+注意：图片放大尺寸如果小于盒子大小，会在显示区域使照片平铺）
+
+     background-position： 60% 30%； 
+}
+
+20.使元素倾斜角度--
+
+transform:rotate(15deg);（可以设置偏转方向）（translate平移）（scale 缩放）（roate旋转）(skew 倾斜)
+
+21.隐藏超出部分--
+Div
+   {overflow:hidden}
+
+22.文本超出部分显示省略号--
+text-overflow语法：
+text-overflow : clip | ellipsis
+
+text-overflow参数值和解释：
+clip : 　不显示省略标记（...），而是简单的裁切
+ellipsis : 　当对象内文本溢出时显示省略标记（...）
+要想实现显示不完内容将显示省略号代替，
+还需要html nobr标签完成（nobr禁止换行标签
+
+23.长度单位---
+
+px，em，pt，ex，pc，in，mm，cm；
+
+px：像素（Pixel）,相对于设备的长度单位，像素是相对于显示器屏幕分辨率而言的。譬如，WONDOWS的用户所使用的分辨率一般是96像素/英寸。而MAC的用户所使用的分辨率一般是72像素/英寸。
+em：相对长度单位。相对于当前对象内文本的字体尺寸。如当前行内文本的字体尺寸未被人为设置，则相对于浏览器的默认字体尺寸。
+ex：相对长度单位。相对于字符“x”的高度。此高度通常为字体尺寸的一半。如当前对行内文本的字体尺寸未被人为设置，则相对于浏览器的默认字体尺寸。
+pt：点（Point），绝对长度单位。
+pc：派卡（Pica），绝对长度单位。相当于我国新四号铅字的尺寸。
+in：英寸（Inch），绝对长度单位。
+mm：毫米（Millimeter），绝对长度单位。
+cm：厘米（Centimeter），绝对长度单位。
+
+其中：1in = 2.54cm = 25.4 mm = 72pt = 6pc ；
+
+
+24.浮动--
+float：left/right
+   （当页面使用浮动，可以添加最小宽度值）
+
+
+25.input控件--
+
+input type包含：
+
+input text输入框、input submit按钮、
+input checkbox多选复选框 input radio单选框
+
+<input name="" type="submit" value="提交" />
+Name为此表单控件识别命名，一般使用英文字母在一个页面里具有唯一性
+Type为表单控件样式
+type="text" 输入框控件，用于输入内容如用户名、密码之类内容输入框控件
+type="submit" 按钮控件，用于提交、重置动作
+type="checkbox" 多选复选框控件，用于多选题、多选功能(进入了解 html checkbox多选框)
+type="radio" 单选框，用于单选，唯一选择功能
+
+26.vertical-align：text-top--
+
+上对齐
+
+27.文字在图片正下方居中--
+
+  <table style="float: left; text-align: center;">
+           <tr><td> <img  id="l1" src="pic.jpg"></td></tr>
+           <tr><td>Y92新都会</td></tr> </table>
+
+28.使文字翻转---
+
+<bdo dir="rtl"></bdo>
+
+29.预定样式按钮--
+button type="button" class="btn btn-default">（默认样式）Default</button>
+<button type="button" class="btn btn-primary">（首选项）Primary</button>
+
+<button type="button" class="btn btn-success">（成功）Success</button>
+
+<button type="button" class="btn btn-info">（一般信息）Info</button>
+
+<button type="button" class="btn btn-warning">（警告）Warning</button>
+
+<button type="button" class="btn btn-danger">（危险）Danger</button>
+
+<button type="button" class="btn btn-link">（链接）Link</button>
+
+大小----
+<button type="button" class="btn btn-primary btn-lg">（大按钮）Large button</button>
+
+<button type="button" class="btn btn-primary">（默认尺寸）Default button</button>
+
+ <button type="button" class="btn btn-primary btn-sm">（小按钮）Small button</button>
+
+<button type="button" class="btn btn-primary btn-xs">（超小尺寸）Extra small 
+
+
+以a链接创建按钮
+<a href="#" class="btn btn-primary btn-lg active" role="button">Primary link</a>
+<a href="#" class="btn btn-default btn-lg active" role="button">Link</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

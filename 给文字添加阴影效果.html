@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文字的阴影效果</title>
+    <style>
+    #c1{
+        /*字体阴影设置：（1）阴影的左右分布，正右负左
+                       （2）阴影的上下分布，正下负上
+                       (3)模糊效果设置 数值越大散布效果越大，越不明显
+              注意： 颜色可叠加
+                */
+
+        text-shadow: 2px 2px 0px orange;
+    }
+    #c2{
+        text-shadow: 2px 2px 5px pink;
+    }
+    #c3{
+        text-shadow: 2px 2px 5px orange,-2px 2px 5px green,2px -2px 5px red;
+    }
+    
+    </style>
+</head>
+<body>
+    <div id="c1">没有模糊效果</div>
+    <div id="c2">有模糊效果</div>
+    <div id="c3">阴影叠加</div>
+    <!--直接在行内添加修饰-->
+    <a style="text-shadow:5px 5px 5px red;">文本阴影效果！</a>
+    <!--<div id="cont" 
+    style="filter:glow(color： #DD002C,strength=3); 
+    height:12px; color:white;"> 发光字就这么简单</div>
+    <script language=javascript>
+istr="哈哈哈，走马灯，发光字，全来到,";
+ostr="<h6><table></tr>";
+for(i=0;i<istr.length;i++){
+ostr=ostr+"<td id='c"+i+"' style='filter:glow(color:#DD002C,strength=5); height:12px; color:#ffffff;font-size:36.0pt;font-family:宋体'>"+istr.substr(i,1)+"</td>";
+}
+ostr=ostr+"</tr></table>";
+document.getElementById("cont").innerHTML=ostr;
+function flash(){
+var col=new Array("#000088","#0000ff","#008800","#0088ff","#00ffff","#ff0000","#ff0088","#ff00ff","#ff8800","#fff8888","#ffff00","#ffff88");
+
+for(i=0;i<istr.length;i++){
+document.getElementById("c"+i).filters.item("glow").color=col[Math.floor(11*Math.random())];
+}
+for(i=0;i<istr.length-1;i++){
+document.getElementById("c"+i).innerHTML=document.getElementById("c"+(i+1)).innerHTML;
+}
+document.getElementById("c"+i).innerHTML=document.getElementById("c0").innerHTML;
+}
+setInterval("flash()",500);
+</script>-->
+</body>
+</html>

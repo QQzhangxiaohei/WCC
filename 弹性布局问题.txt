@@ -1,0 +1,56 @@
+弹性布局--
+
+
+1.行内元素使用弹性布局：
+.box{
+    display：inline-flex；
+}
+2.容器的属性：
+
+.flex-direction  决定主轴方向（排列方向）row  row-reverse  colum
+
+.flex-wrap  换行 nowwrap wrap（换行，第一行在上方）  wrap-reverse（换行，第一行在下方）
+
+.flex-flow  默认值为row nowrap（不知道有什么用，好吧挺省事）
+
+.justify-content  项目在主轴上的对齐方式  flex-start  flex-end center
+
+.align-items 项目在交叉轴上的对齐方式
+flex-start交叉轴的起点对齐 flex-end 终点对齐  
+
+center 中心点对齐   baseline 项目的第一行文字的基线对齐
+
+stretch（默认值） 如果项目未设置高度或设为auto，将占满整个容器的高度 
+
+多根轴线的对齐方式
+align-content   flex-start与交叉轴的起点对齐
+                flex-end 终点对齐
+                center与交叉轴的中点对齐
+                stretch 默认，轴线占满整个交叉轴
+                space-betwween
+                space-around
+
+.order属性  定义项目的排列顺序默认为0    数值越小排列越靠前
+
+.flex-grow属性 定义放大比例  默认值为0
+
+.flex-shrink属性  定义缩小比例 默认值为1
+
+.flex-basis属性 定义分配多鱼空间之前，项目占据的主轴空间 默认值auto
+
+.align-self属性  允许单个项目与其他项目对其方式不一样 默认值为auto
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

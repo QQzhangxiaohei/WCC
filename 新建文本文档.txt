@@ -1,0 +1,8 @@
+1.盒模型：组成部分（width/height，  padding，border，margin）
+
+2.box-sizing：center-box；  width/height指的是内容区域的宽高
+  box-sizing:border-box：   width/height指的是整个盒子的宽高
+
+
+3.从css的角度对标签进行性质上的划分：行标签<span>, 块标签<div>,
+  行内块标签<img>

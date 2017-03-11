@@ -1,0 +1,24 @@
+一.容器类的属性:  (1)display :flex 设置弹性盒子;
+                             (2)flex-direction :设置主轴方向(row,水平向右)
+                             row | row-reverse | column | column-reverse
+                             (3)justify-content :设置主轴方向 项目的对齐方式
+                             flex-start | flex-end | center | space-around | space-between                            
+                             (4)align-items :设置交叉轴方向的对齐方式
+                             flex-start | flex-end | center | baseline | stretch
+ 
+                             (5)flex-wrap: 设置项目换行
+                             nowrap | wrap | wrap-reverse
+                             (6)align-content: 设置多条轴线时,项目对齐方式.
+                             flex-start | flex-end | center | space-around | space-between | stretch
+二.项目属性:
+                     (1)flex-shrink: 设置项目的缩小比例(默认值为1.如果值为0,则表示项目                         不会缩小.值越大,缩小的多)
+                     (2)flex-basis :设置在分割剩余空间前,项目占据主轴的空间.(类似设置宽高,如果为auto,则为                     项目原本的宽度)
+                     (3)flex-grow:  设置项目的放大比例(默认值为0.),瓜分剩余空间.
+                     
+                     (4)order: 设置项目的排列顺序(数值越小越靠前).
+                     
+                     (5)align-self:  单独设置某一个项目在   交叉轴方向   的对齐方式.
+                     auto(继承父元素的align-items属性) | flex-start | flex-end | center | baseline | stretch
+                     (6)flex:   flex-grow(0)  flex-shrink(1)  flex-basis(auto) ;
+
+注意：以下元素会失效   float clear vertical-alain
